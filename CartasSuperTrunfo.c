@@ -100,6 +100,24 @@ int main() {
     printf("Quantos pontos turisticos?: ");
         scanf(" %d", &turistico2);  //Pergunta
   
+    //Calcular Densidade Populacional e PIB per Capital
+
+    float Densidade, Densidade2;
+
+    float Capital, Capital2;
+
+    //Calculo Carta 1
+        
+        Densidade = (float) população / area;
+
+        Capital = (pib * 1000000000.0) / (float) população;
+
+    //Calculo Carta 2
+
+        Densidade2 = (float) população2 / area2;
+
+        Capital2 = (pib2 * 1000000000.0) / (float) população2;
+ 
     //Descrição da Carta 1
 
     printf("\nCarta 1:\n");
@@ -118,6 +136,10 @@ int main() {
 
     printf("Número de Pontos Turísticos: %d\n", turistico);
 
+    printf("Densidade Populacional: %.2f hab/km²\n", Densidade);
+
+    printf("PIB per Capita: %.2f reais\n", Capital);
+
     //Descrição da Carta 2
 
     printf("\nCarta 2:\n");
@@ -135,6 +157,10 @@ int main() {
     printf("PIB: %.2f bilhões de reais\n", pib2);
 
     printf("Número de Pontos Turísticos: %d\n", turistico2);
+
+    printf("Densidade Populacional: %.2f hab/km²\n", Densidade2);
+
+    printf("PIB per Capita: %.2f reais\n", Capital2);
 
     return 0;
 }
