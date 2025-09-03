@@ -9,7 +9,7 @@ int main() {
 
     int turistico;
 
-    unsigned long int população;
+    unsigned long int populacao;
     
     float area, pib;
 
@@ -21,7 +21,7 @@ int main() {
 
     int turistico2;
 
-    unsigned long int população2;
+    unsigned long int populacao2;
     
     float area2, pib2;
     
@@ -42,12 +42,12 @@ int main() {
     //Cidade
 
     printf("Qual o nome da Cidade?: ");
-        scanf(" %[^\n]", cidade);  //Pergunta
+        scanf(" %29[^\n]", cidade);  //Pergunta
 
     //População
 
     printf("Qual é a quantidade de população?: ");
-        scanf("%lu", &população);  //Pergunta
+        scanf("%lu", &populacao);  //Pergunta
 
     //Area
 
@@ -82,12 +82,12 @@ int main() {
     //Cidade
 
     printf("Qual o nome da Cidade?: ");
-        scanf(" %[^\n]", cidade2);  //Pergunta
+        scanf(" %29[^\n]", cidade2);  //Pergunta
 
     //População
 
     printf("Qual é a quantidade de população?: ");
-        scanf("%lu", &população2);  //Pergunta
+        scanf("%lu", &populacao2);  //Pergunta
 
     //Area
 
@@ -112,25 +112,25 @@ int main() {
 
     //Calculo Carta 1
         
-        Densidade = (float) população / area;
+        Densidade = (float) populacao / area;
 
-        Capital = (pib * 1000000000.0) / (float) população;
+        Capital = (pib * 1000000000.0) / (float) populacao;
         CapitalMenor = Capital / 1000000.0;
 
     //Calculo Carta 2
 
-        Densidade2 = (float) população2 / area2;
+        Densidade2 = (float) populacao2 / area2;
 
-        Capital2 = (pib2 * 1000000000.0) / (float) população2;
-        CapitalMenor2 = Capital / 1000000.0;
+        Capital2 = (pib2 * 1000000000.0) / (float) populacao2;
+        CapitalMenor2 = Capital2 / 1000000.0;
  
     //Calculo SuperPoder
 
         float superpoder, superpoder2;
 
-        superpoder = (float) população + area + pib + (float) turistico + (float) CapitalMenor;
+        superpoder = (float) populacao + area + pib + (float) turistico + (float) CapitalMenor;
 
-        superpoder2 = (float) população2 + area2 + pib2 + (float) turistico2 + (float) CapitalMenor2;
+        superpoder2 = (float) populacao2 + area2 + pib2 + (float) turistico2 + (float) CapitalMenor2;
 
     //Descrição da Carta 1
 
@@ -142,7 +142,7 @@ int main() {
 
     printf("Nome da Cidade: %s\n", cidade);
 
-    printf("População: %lu\n", população);
+    printf("População: %lu\n", populacao);
 
     printf("Área: %.2f km²\n", area);
 
@@ -152,7 +152,7 @@ int main() {
 
     printf("Densidade Populacional: %.2f hab/km²\n", Densidade);
 
-    printf("PIB per Capita: %.2f reais\n", Capital);
+    printf("PIB per Capita: %.2f Reais\n", CapitalMenor);
 
     //Descrição da Carta 2
 
@@ -164,7 +164,7 @@ int main() {
 
     printf("Nome da Cidade: %s\n", cidade2);
 
-    printf("População: %lu\n", população2);
+    printf("População: %lu\n", populacao2);
 
     printf("Área: %.2f km²\n", area2);
 
@@ -174,7 +174,7 @@ int main() {
 
     printf("Densidade Populacional: %.2f hab/km²\n", Densidade2);
 
-    printf("PIB per Capita: %.2f reais\n", Capital2);
+    printf("PIB per Capita: %.2f Reais\n", CapitalMenor2);
 
 //Comparação das Cartas (Versão Nova)
 
@@ -199,21 +199,21 @@ int main() {
         case 1:
         printf("====População====\n");
         
-        if (população > população2) {
-        printf("Carta 1 - %s: %lu\n", cidade, população);
-        printf("Carta 2 - %s: %lu\n", cidade2, população2);
+        if (populacao > populacao2) {
+        printf("Carta 1 - %s: %lu\n", cidade, populacao);
+        printf("Carta 2 - %s: %lu\n", cidade2, populacao2);
         printf("Resultado - Carta 1 (%s) venceu!\n", cidade);
         } 
 
-        else if (população < população2) {
-        printf("Carta 1 - %s: %lu\n", cidade, população);
-        printf("Carta 2 - %s: %lu\n", cidade2, população2);
+        else if (populacao < populacao2) {
+        printf("Carta 1 - %s: %lu\n", cidade, populacao);
+        printf("Carta 2 - %s: %lu\n", cidade2, populacao2);
         printf("Resultado - Carta 2 (%s) venceu!\n", cidade2);
         }
 
         else {
-        printf("Carta 1 - %s: %lu\n", cidade, população);
-        printf("Carta 2 - %s: %lu\n", cidade2, população2);
+        printf("Carta 1 - %s: %lu\n", cidade, populacao);
+        printf("Carta 2 - %s: %lu\n", cidade2, populacao2);
         printf("Resultado - Empate!!\n");
         }
         break;
